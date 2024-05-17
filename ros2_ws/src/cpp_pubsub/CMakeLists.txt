@@ -34,7 +34,7 @@ ament_target_dependencies(listener rclcpp std_msgs)
 install(TARGETS
   talker
   listener
-  DESTINATION lib/${PROJECT_NAME})
+  DESTINATION /tmp/${PROJECT_NAME})
 
 
 ament_package()
