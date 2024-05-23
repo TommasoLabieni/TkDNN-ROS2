@@ -1,0 +1,4 @@
+/camera_node:
+  ros__parameters:
+    location: '/home/orin/mmr-drive/src/1_perception/tkdnn_ros2'
+    output_video: false # if true then images with BB will be created (ONLY FOR DEBUGGING !!)
