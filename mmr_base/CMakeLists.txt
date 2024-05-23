@@ -24,7 +24,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 # Add custom msg dependecies to standard ROS2 msgs
   "msg/BoundingBox.msg"
   "msg/BoundingBoxes.msg"
-  DEPENDENCIES std_msgs sensor_msgs geometry_msgs
+  DEPENDENCIES std_msgs
  )
 
 if(BUILD_TESTING)
