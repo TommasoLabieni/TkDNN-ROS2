@@ -85,12 +85,12 @@ endif()
 set(CUDA_NVCC_FLAGS "${CUDA_NVCC_FLAGS}" --compiler-options '-fPIC')
 
 
--find_library(CUDNN_LIBRARY NAMES cudnn)
--if(NOT CUDNN_LIBRARY)
--  find_cuda_helper_libs(cudnn)
--  set(CUDNN_LIBRARY ${CUDA_cudnn_LIBRARY} CACHE FILEPATH "location of the cuDNN library")
--  unset(CUDA_cudnn_LIBRARY CACHE)
--endif()
+find_library(CUDNN_LIBRARY NAMES cudnn)
+if(NOT CUDNN_LIBRARY)
+  find_cuda_helper_libs(cudnn)
+  set(CUDNN_LIBRARY ${CUDA_cudnn_LIBRARY} CACHE FILEPATH "location of the cuDNN library")
+  unset(CUDA_cudnn_LIBRARY CACHE)
+endif()
 include_directories(${CUDNN_INCLUDE_DIR})
 
 find_package(yaml-cpp REQUIRED)
